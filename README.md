@@ -1,6 +1,4 @@
 # Split-Void Numbers
-
---------------------------
  
 The Split-Void numbers are a number system made by me, Dane, and Sandrea, that defines division by zero via a new number, $u$, which is equal to $\frac{1}{0}$.  This system loses some properties present in the real numbers, namely the associative and distributive properties of multiplication.  This library implements the Split-Void numbers in C# with the following operations:
 
