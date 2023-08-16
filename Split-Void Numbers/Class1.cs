@@ -14,8 +14,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Emit;
 using System.Runtime.Loader;
-using Fractions;
-using System.Security.Cryptography.X509Certificates;
+using ExtendedNumerics;
 
 namespace Split_Void_Numbers
 {
@@ -230,8 +229,7 @@ namespace Split_Void_Numbers
         {
             if (!double.IsRealNumber(b))
                 throw new ArgumentException("The number's real component cannot be infinite or NaN.", nameof(b));
-            Fractions.TypeConverters.FractionTypeConverter converter = new();
-            Fraction frac = (Fraction)converter.ConvertFrom(b)!;
+            Fraction frac = new Fraction(b);
             BigInteger numer = frac.Numerator;
             List<SplitVoid> tempNums = new();
             Func<SplitVoid, BigInteger, SplitVoid> repeatedSquare = new((n, times) =>
